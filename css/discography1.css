@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+
+
+
+/* 全体に適用する */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* リンク */
+a {
+    transition: background 0.5s;
+    color: #000;
+    list-style: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* ホバー */
+a:hover {
+    background-color: #f4f5f9;
+}
+
+/* 基本設定 */
+body {
+    text-align: center;
+    background-color: #fff;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    color: #000;
+}
+
+/* ヘッダー */
+header {
+    position: relative;
+    margin: 15vh auto;
+    width: 70%;
+}
+
+/* 線 */
+header::before,
+header::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+}
+
+header::before {
+    top: -2.5em;
+    left: -2.5em;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+}
+
+header::after {
+    bottom: -2.5em;
+    right: -2.5em;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+
+.header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .header__inner{
+    max-width: 1152px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    .header__logo{
+    flex: none;
+    width: auto;
+    height: 35px;
+    margin-left: -60px;
+    }
+    .header__navgroup{
+    margin-left: auto;
+    display: flex;
+    flex: none;
+    }
+    .header__navgroup > * + *{
+    margin-left: 60px;
+    }
+    .header__navitem{
+    font-size: 16px;
+    color: #000;
+    animation: FadeIn 1.6s;
+    }
+    @keyframes FadeIn {
+        0% {
+          opacity: 0;
+          transform: translateX(64px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+
+#header{
+    position: fixed;
+}
+#mainvisual img{
+    max-width: 50px;
+}
+
+.site-title a img{
+    list-style: none;
+    font-family: 'Shadows Into Light', cursive;
+}
+#header nav ul li{
+    list-style: none;
+}
+
+
+
+/* 画像サイズ */
+header img {
+    width: 100%;
+    animation: Slideup 1.6s;
+}
+@keyframes Slideup {
+    0% {
+      opacity: 0;
+      transform: translateY(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* 見出し */
+header h1 {
+    margin: 1.5em auto;
+    letter-spacing: 0.2em;
+    text-indent: 0.2em;
+    text-shadow: 2px 2px 3px #c0c0c0;
+    font-size: 1.5em;
+    animation: Slideleft 1.6s;
+}
+@keyframes Slideleft {
+    0% {
+      opacity: 0;
+      transform: translateX(-64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  aside{
+    animation: Slideup 1.6s;
+  }
+  @keyframes Slideup {
+    0% {
+      opacity: 0;
+      transform: translateY(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/* フォントの指定 */
+header h1,
+nav ul li a,
+aside,
+section h2,
+footer,
+footer a {
+    font-family: 'EB Garamond', 'はれのそら明朝', serif;
+}
+
+/* ナビゲーション */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    margin: 0 0.5em;
+}
+
+/* 補足情報 */
+aside {
+    margin: 1.5em auto;
+    font-size: 11px;
+}
+
+/* セクション */
+#info h2{
+    font-family: 'Permanent Marker', cursive;
+    animation: Slideup 1.6s;
+}
+@keyframes SlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+#info p{
+    animation: Slideright 1.6s;
+}
+@keyframes Slideright {
+    0% {
+      opacity: 0;
+      transform: translateX(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+section {
+    margin: 3em auto 0;
+    padding: 3em;
+    position: relative;
+    text-align: justify;
+    word-break: break-all;
+}
+
+/* 見出し */
+section h2 {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    transform: rotate(-15deg);
+}
+
+/* セクション内共通 */
+section span,
+section strong {
+    font-weight: bold;
+}
+
+section mark {
+    background: linear-gradient(transparent 70%, #f4f5f9 30%);
+}
+
+section strong {
+    color: red;
+}
+
+/* リスト系 */
+section dl,
+section ul {
+    margin: 1em auto 1.5em;
+}
+
+section dd {
+    margin-left: 1em;
+}
+
+section ul {
+    list-style-type: none;
+}
+
+section ul li a {
+    margin-left: 1em;
+}
+
+/* リンク */
+.link {
+    display: inline-block;
+    margin: 0.2em auto;
+    padding: 0.2em 0.5em;
+    text-decoration: none;
+    border: 1px solid #000;
+}
+
+/* 余白 */
+p,
+footer {
+    margin: 1em auto 1.5em;
+}
+
+/* フォーム系 */
+textarea,
+input[type] {
+    -webkit-appearance: none;
+    padding: 0.2em 0.5em;
+    background-color: #f4f5f9;
+    border: none;
+    border-radius: 0;
+}
+
+textarea {
+    width: 280px;
+    height: 200px;
+}
+
+input[type=text] {
+    width: 80px;
+}
+
+input[type=submit] {
+    width: auto;
+}
+
+/* 横幅768px以上で読み込む */
+@media screen and (min-width:768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* 横幅1024px以上で読み込む */
+@media screen and (min-width:1024px) {
+    #wrap {
+        margin: 5em auto 0;
+        max-width: 900px
+    }
+
+    #wrap::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+
+    header {
+        margin: 3em auto;
+        width: 30%;
+        float: left;
+    }
+
+    main {
+        margin: 0 auto;
+        overflow: hidden;
+        width: 60%;
+    }
+}
+
+/* 見出し */
+.scroll h1 {
+    margin: 0.5em auto;
+    text-shadow: 5px 5px 0 #efefef;
+    font-family: 'Cinzel', serif;
+}
+
+/* 段落 */
+.scroll p {
+    margin: 1em auto;
+    width: 250px;
+    text-align: justify;
+    word-break: break-all;
+}
+
+.scroll .gray {
+    font-size: 12px;
+    color: #808080;
+}
+/* 線 */
+.line {
+    margin: 0.6em auto;
+    width: 1px;
+    height: 50px;
+    background-color: #000;
+}

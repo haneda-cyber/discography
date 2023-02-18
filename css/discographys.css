@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Noto Serif JP', serif;
+}
+
+
+body {
+    text-align: center;
+    background-color: #fff;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    color: #000;
+}
+
+
+a {
+    padding: 0.2em;
+    text-decoration: none;
+    color: #000;
+}
+
+
+a:hover {
+    border: none;
+}
+
+
+a:visited {
+    color: #000;
+    font-weight: bold;
+}
+
+/* 背景画像 */
+#bg {
+    position: absolute;
+    top: 0;
+    right: 6%;
+    width: 100px;
+    height: 100vh;
+    z-index: -100;
+    background: url('../img/11c8a7886da0a3281f1c3612c4b61ac7.jpg') 20%/cover;
+    animation: Slidedown 1.6s;
+}
+@keyframes Slidedown {
+    0% {
+      opacity: 0;
+      transform: translateY(-64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .ghostivent{
+    max-width: 80%;
+  }
+/* ヘッダーとセクション */
+header,
+section {
+    margin: 3em auto;
+    width: 90%;
+    max-width: 600px;
+}
+header h1{
+    animation: SlideIn 1.6s;
+}
+@keyframes SlideIn {
+    0% {
+      opacity: 0;/*初期状態では透明に*/
+      transform: translateX(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  aside{
+    animation: SlideIn 1.6s;
+  }
+  @keyframes SlideIn {
+    0% {
+      opacity: 0;/*初期状態では透明に*/
+      transform: translateX(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+li{
+    animation: FadeIn 1.6s;
+}
+@keyframes FadeIn {
+    0% {
+      opacity: 0;
+      
+    }
+    100% {
+      opacity: 1;
+      
+    }
+  }
+header,
+section,
+aside,
+article {
+    text-align: justify;
+    word-break: break-all;
+}
+
+/* ヘッダー見出し */
+header h1 {
+    padding-left: 0.5em;
+    border-left: 5px solid rebeccapurple;
+    line-height: 1.3;
+    font-family: 'XANO明朝', serif;
+    font-size: 1.2em;
+    color: red;
+}
+
+/* 補足情報 */
+aside {
+    margin-top: 1em;
+    width: 65%;
+    font-size: 11px;
+    color: #606060;
+}
+
+/* リスト系 */
+
+section ol {
+    margin-left:-10% ;
+    list-style-position: inside;
+    color: #000;
+    font-weight: bold;
+}
+
+section ul {
+    list-style-type: none;
+}
+
+section li {
+    margin: 1em auto;
+}
+section ol li{
+    color: #000;
+}
+/* セクションリンク */
+section a {
+    padding: 0;
+    border-bottom: thin solid #000;
+    background-color: transparent;
+}
+
+/* 段落 */
+section p {
+    font-size: 11px;
+    color: #606060;
+}
+
+/* 重要事項 */
+section strong {
+    font-weight: bold;
+    color: red;
+}
+
+/* アーティクル */
+article {
+    padding: 3em;
+    background-color: #fff;
+}
+
+/* アーティクル見出し */
+article h1 {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* アーティクル段落 */
+article p {
+    margin: 1em auto 1.5em;
+    max-width: 600px;
+}
+
+/* フッター */
+.footer-top {
+    display: table;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .footer-top .copyright {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.2rem;
+  }
+  .footer-top .copyright img {
+    width: 150px;
+    height: auto;
+    padding: 40px 0;
+  }
+
+/* 画像 */
+.imagebox {
+    width: 100%;
+    height: 80px;
+    background: url('image.jpg') center/cover;
+}
+
+/* メニュー */
+.menu {
+    margin: 1.5em auto;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.menu li a {
+    padding: 0.2em 0.5em;
+    border: thin solid #176cb5;
+    font-size: 0.9em;
+    color: #176cb5;
+}
+
+/* フォーム系 */
+textarea,
+input[type] {
+    -webkit-appearance: none;
+    padding: 0.2em 0.5em;
+    background-color: #fff;
+    border: thin solid #000;
+    border-radius: 0;
+}
+
+textarea {
+    width: 200px;
+    height: 70px;
+}
+
+input[type=text] {
+    width: 80px;
+}
+
+input[type=submit] {
+    width: auto;
+}
+
+/* 横幅768px以上で読み込む */
+@media screen and (min-width:768px) {
+
+    
+    body {
+        font-size: 14px;
+    }
+
+    
+    #bg {
+        width: 230px;
+    }
+
+   
+    header h1 {
+        font-size: 1.5em;
+    }
+
+}
+
+/* 横幅1024px以上で読み込む */
+@media screen and (min-width:1024px) {
+
+    
+    #bg {
+        width: 330px;
+    }
+
+}
+
+
+@media screen and (min-width:1440px) {
+
+    
+    body {
+        font-size: 15px;
+    }
+
+    
+    #bg {
+        width: 430px;
+    }
+
+
+}
+/*main*/
+main,
+section,
+article {
+    margin: 3em auto;
+    width: 80%;
+    max-width: 500px;
+    height: 70vh;
+}
+
+/* 見出し */
+main h1 {
+    margin: 3em auto 0;
+}
+main p{
+    color: #000;
+    margin-left: auto;
+}
+
+/* フォントの指定 */
+main h1 span,
+article h2 {
+    font-family: 'はんなり明朝', 'Noto Serif JP', serif;
+}
+
+/* フェードイン */
+main h1 span:nth-of-type(1) {
+    animation: FadeIn 1s;
+}
+
+main h1 span:nth-of-type(2) {
+    animation: FadeIn 2s;
+}
+
+main h1 span:nth-of-type(3) {
+    animation: FadeIn 3s;
+}
+
+main h1 span:nth-of-type(4) {
+    animation: FadeIn 4s;
+}
+
+/* アイコン */
+.icon {
+    display: inline-block;
+    margin: 1.5em 1em 1em;
+    width: 15px;
+    height: 15px;
+    background: url('image.png') center/cover;
+    transform: rotate(45deg);
+}
+
+/* アイコンフェードイン */
+main .one {
+    animation: FadeIn 1s;
+}
+
+main .two {
+    animation: FadeIn 2s;
+}
+
+main .three {
+    animation: FadeIn 3s;
+}
+
+/* ヘッダー段落フェードイン */
+main p {
+    animation: FadeIn .5s;
+    color: #000;
+    text-align: left;
+}
+
+.line {
+    padding-top: 30px;
+    margin: 0.5em auto;
+    width: 1px;
+    height: 60px;
+    background-color: #000;
+}
+.line1{
+    padding-top: 30px;
+    margin: 0.5em auto;
+    width: 1px;
+    height: 150px;
+    background-color: #000;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/discography1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header__inner">
+        <img class="header__logo" src="img/ghostlogo2.png">
+        <div class="header__navgroup">
+        <div class="header__navitem"><a href="discographys.html">Back to Discography</a></div>
+        <div class="header__navitem"><a href="top.html">Home</a></div>
+        <div class="header__navitem"><a href="info.html">Infomation</a></div>
+        <div class="header__navitem"><a href="biography.html">Biography</a></div>
+        <div class="header__navitem"><a href="gallery.html">Special</a></div>
+        </div>
+        </div>
+        </div>
+
+
+    <div id="wrap">
+        <header>
+            <img src="img/Maryonnacross.jpg">
+            <h1>Mary On A Cross</h1>
+            
+            <aside>発売日<br>2019.10.11</aside>
+        </header>
+        <main>
+            <section id="info">
+                <h2>Album①</h2>
+                <p>
+                    
+                    <a href="#"></a><br>
+                    <a href="https://mf.awa.fm/3rez6Y5" class="link">音楽を聞く</a>
+                    <a href="discographys.html" class="link">TOPに戻る</a>
+                    <a href="discography2.html" class="link">次へ行く</a>
+                </p>
+                <p>■1969年夏、Papa Nihilがフロントマンを務めるGhostと言う名の新進気鋭のバンドが、ハリウッドのサンセット・ストリップにあるウィスキー・ア・ゴー・ゴーで初ステージを踏んだ。それは、「Kiss The Go Goat」と「Mary on A Cross」を両A面に配した、Galaxy Recordingsからのデビュー・シングル「Seven Inches of Satanic Panic」のリリースを記念したショウだった。その後、オリジナル・ラインアップによるGhostは解散し、シングルのマスター・テープや、バンドのライヴ・パフォーマンスを記録した唯一の映像であった「Kiss The Go Goat」のMVは、行方不明となっていた・・・先頃、Papa Nihilの手によってそのマスター・テープと8mmフィルムが発見・修復されるまでは。
+                    そしてLoma Vistaレーベルは、Ghostと彼らのデビュー・シングルの50周年を祝して、『Seven Inches of Satanic Panic:'Kiss The Go Goat' and 'Mary on A Cross』の復活リリースを発表した。</p>
+            </section>
+            
+    </main>
+</div>
+
+
+<footer>Discography by <a href="">Koki haneda</a>.</footer>
+<!-- ここから下スムーススクロール -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function() {
+        $('a[href^="#"]').click(function() {
+            var speed = 800;
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $('body,html').animate({
+                scrollTop: position
+            }, speed, 'swing');
+            return false;
+        });
+    });
+
+</script>
+</body>
+</html>
